@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="travel.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 22px;
+        color: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        transform: scale(0.8);
+      }
+
+      .swiper-slide-active,
+      .swiper-slide-duplicate-active {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+
+  <!-- onscroll="stickFun()" -->
+  <body>
+    <section class="main">
+      <section class="section1">
+        <div class="main1">
+          <div id="openMenu">
+            <div id="iconOpen"></div>
+          </div>
+          <div class="sideNav">
+            <div id="iconClose"></div>
+            <div class="sideNavBox">
+              <div class="title">Explore vacations</div>
+              <div class="continentBox">
+                <h3>Choose a continent</h3>
+                <div class="allContinents">
+                  <div class="continent" id="Africa">
+                    <div class="overlay">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="continentName">
+                          <h4>Africa</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="continent" id="Asia">
+                    <div class="overlay">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="continentName">
+                          <h4>Asia</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="continent" id="Europe">
+                    <div class="overlay">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="continentName">
+                          <h4>Europe</h4>
+                          <div class="subtitle">12 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="destinationBox">
+                <h3>Choose a destination</h3>
+                <div class="alldestinations">
+                  <div class="destination" id="France">
+                    <div class="overlay">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="destinationName">
+                          <h4>France</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="destination" id="Indonesia">
+                    <div class="overlay">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="destinationName">
+                          <h4>Indonesia</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="destination" id="Greece">
+                    <div class="overlay">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="destinationName">
+                          <h4>Greece</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="destination" id="Egypt">
+                    <div class="overlay">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="destinationName">
+                          <h4>Egypt</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact">
+                <div class="contactBox">
+                  <h3>contact us</h3>
+                  <div class="call inforBox">
+                    <a href=" ">
+                      <div class="infor">Schedule a call</div>
+                    </a>
+                  </div>
+                  <div class="email inforBox">
+                    <a href=" "><div class="infor">info@travel.com</div> </a>
+                  </div>
+                  <div class="tele inforBox">
+                    <a href=""><div class="infor">(666)666-5555</div> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="topNav">
+            <div class="brandName">
+              <a href="https://webflow-path-three.webflow.io/" target="_blank"
+                >COVILLA</a
+              >
+            </div>
+
+            <div class="rightNav">
+              <div class="navToggle">
+                <div id="dropBtn">
+                  destinations
+                  <div class="angle"></div>
+                </div>
+
+                <div class="dropContent">
+                  <div class="location location1">
+                    <div class="locationDark">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="locationName">
+                          <h4>France</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="location location2">
+                    <div class="locationDark">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="locationName">
+                          <h4>Indonesia</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="location location3">
+                    <div class="locationDark">
+                      <a
+                        href="https://webflow-path-three.webflow.io/location/france"
+                      >
+                        <div class="locationName">
+                          <h4>Greece</h4>
+                          <div class="subtitle">6 vacations</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="location location4">
+                    <a
+                      href="https://webflow-path-three.webflow.io/location/france"
+                    >
+                      <div class="locationName">
+                        <h4>Egypt</h4>
+                        <div class="subtitle">6 vacations</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="headingBox">
+            <h1 class="heading">Let's plan your next vacation</h1>
+          </div>
+
+          <div class="circleBox">
+            <div class="circleBigest"></div>
+            <div class="circleBig"></div>
+            <div class="circleSmall"></div>
+          </div>
+
+          <div class="bottom-slide">
+            <div class="bottomBox">
+              <div class="arrowbox">
+                <div class="RArrowbox">
+                  <div class="RArrow"></div>
+                </div>
+                <div class="LArrowbox">
+                  <div class="LArrow"></div>
+                </div>
+              </div>
+              <div class="textBox">
+                <div class="text">
+                  <div id="heading">Thessaloniki,Greece</div>
+                  <div id="subheading">STARTING AT $ 6700</div>
+                </div>
+                <div class="turnToPage">
+                  <div class="angleRight"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main2">
+        <div class="bannerBox">
+          <div class="banner">
+            <div class="subtitle">Covilla Destinations</div>
+            <h1 class="title">Across the world</h1>
+          </div>
+        </div>
+
+        <!-- Swiper -->
+
+        <div class="swiperBox">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide France"><h3>France</h3></div>
+              <div class="swiper-slide Indonesia"><h3>Indonesia</h3></div>
+              <div class="swiper-slide Grace"><h3>Grace</h3></div>
+              <div class="swiper-slide Egypt"><h3>Egypt</h3></div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <section class="main3">
+        <div class="main3Box">
+          <div class="displayBox">
+            <div class="content">
+              <p class="para">
+                Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec
+                ac neque. Sed vitae sollicitudin elit, ac tristique nisi.
+                Pellentesque rutrum egestas massa lacinia volutpat. Integer et
+                facilisis elit, vitae lobortis enim.
+              </p>
+
+              <div class="allCaptions">
+                <h3 class="caption" id="c1">Samantha Vohnhale</h3>
+                <h3 class="caption" id="c2">Wilson Tomales</h3>
+                <h3 class="caption" id="c3">Tammy Georgeon</h3>
+                <h3 class="caption" id="c4">Emily Camphon</h3>
+                <h3 class="caption" id="c5">Cassie Shamath</h3>
+              </div>
+            </div>
+
+            <div class="arrow">
+              <div class="arrowLeft" id="arrowLeft3"></div>
+              <div class="arrowRight" id="arrowRight3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main4">
+        <div class="main4Box">
+          <div class="fixedBar"></div>
+          <div class="barBox">
+            <h3>Egypt</h3>
+            <!-- <div class="fixedBar1"></div> -->
+            <div id="myBar1" class="bars"></div>
+            <div class="mybtn" id="btn1">
+              <div class="btnB"></div>
+              <div class="btnS"></div>
+            </div>
+          </div>
+          <div class="barBox">
+            <h3>Greece</h3>
+
+            <div id="myBar2" class="bars"></div>
+
+            <div class="mybtn" id="btn2">
+              <div class="btnB"></div>
+              <div class="btnS"></div>
+            </div>
+          </div>
+          <div class="barBox">
+            <h3>Indonesia</h3>
+
+            <div id="myBar3" class="bars"></div>
+            <div class="mybtn">
+              <div class="btnB"></div>
+              <div class="btnS" id="btn3"></div>
+            </div>
+          </div>
+          <div class="barBox">
+            <h3>France</h3>
+
+            <div id="myBar4" class="bars"></div>
+            <div class="mybtn">
+              <div class="btnB"></div>
+              <div class="btnS" id="btn4"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main5">
+        <div class="imagebox">
+          <div class="imgs img1"></div>
+        </div>
+
+        <div class="imagebox">
+          <div class="imgs img2"></div>
+        </div>
+
+        <div class="imagebox">
+          <div class="imgs img3"></div>
+        </div>
+      </section>
+
+      <section class="main6">
+        <div class="main6_box1">
+          <div class="textBox">
+            <h3 class="text1">Take your family on the best vacation</h3>
+            <p class="text2">
+              Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac
+              neque. Sed vitae sollicitudin elit, ac tristique nisi.
+              Pellentesque rutrum egestas massa lacinia volutpat. Integer et
+              facilisis elit, vitae.
+            </p>
+            <div class="choose">Choose a Destination</div>
+          </div>
+          <div class="pic"></div>
+        </div>
+
+        <div class="main6_box2">
+          <div class="value1 valueBox">
+            <div class="imgBackground">
+              <img
+                src="./image/snowflake-regular.svg"
+                alt="img1"
+                class="img1"
+              />
+            </div>
+            <h3 class="valueT1">Hands-on planning</h3>
+            <p class="valueP1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              sollicitudin eget velit.
+            </p>
+          </div>
+          <div class="value2 valueBox">
+            <div class="imgBackground">
+              <img
+                src="./image/handshake-regular.svg"
+                alt="img2"
+                class="img2"
+              />
+            </div>
+            <h3 class="valueT2">Added value & perks</h3>
+            <p class="valueP2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              sollicitudin eget velit.
+            </p>
+          </div>
+          <div class="value3 valueBox">
+            <div class="imgBackground">
+              <img src="./image/plane-solid.svg" alt="img3" class="img3" />
+            </div>
+            <h3 class="valueT3">Access best deals</h3>
+            <p class="valueP3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              sollicitudin eget velit.
+            </p>
+          </div>
+          <div class="value4 valueBox">
+            <div class="imgBackground">
+              <img src="./image/stack-overflow.svg" alt="img4" class="img4" />
+            </div>
+            <h3 class="valueT4">Personalized</h3>
+            <p class="valueP4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+              sollicitudin eget velit.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="main7">
+        <div class="main7Box">
+          <div class="leftWrapper">
+            <div class="leftBox">
+              <div class="imgBox"></div>
+              <div class="subtitle">GET STARTED TODAY</div>
+              <h2>Take the stress out of planning vacations</h2>
+              <div class="content">
+                Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec
+                ac neque. Sed vitae sollicitudin elit, ac tristique nisi.
+              </div>
+              <div class="meetBtn">MEET YOUR TRAVEL AGENTS</div>
+            </div>
+          </div>
+          <div class="rightBox">
+            <div class="rightBoxes work1">
+              <div class="indexBox">
+                <div class="index">1</div>
+              </div>
+              <h3 class="title">First, clone this template.</h3>
+              <div class="display">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                sollicitudin eget velit ut sollicitudin. Nunc ullamcorper nibh
+                nulla. In viverra id felis id tincidunt.
+              </div>
+            </div>
+
+            <div class="rightBoxes work2">
+              <div class="indexBox">
+                <div class="index">2</div>
+              </div>
+              <h3 class="title">Next, use it on your projects..</h3>
+              <div class="display">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                sollicitudin eget velit ut sollicitudin. Nunc ullamcorper nibh
+                nulla. In viverra id felis id tincidunt.
+              </div>
+            </div>
+
+            <div class="rightBoxes work3">
+              <div class="indexBox">
+                <div class="index">3</div>
+              </div>
+              <h3 class="title">Then, tell me what you think.</h3>
+              <div class="display">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                sollicitudin eget velit ut sollicitudin. Nunc ullamcorper nibh
+                nulla. In viverra id felis id tincidunt.
+              </div>
+            </div>
+
+            <div class="rightBoxes work4">
+              <div class="indexBox">
+                <div class="index">4</div>
+              </div>
+              <h3 class="title">Finally, share the template.</h3>
+              <div class="display">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                sollicitudin eget velit ut sollicitudin. Nunc ullamcorper nibh
+                nulla. In viverra id felis id tincidunt.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slides">
+        <div class="slideBox">
+          <div class="slide slide1">
+            <div class="dark"></div>
+          </div>
+          <div class="slide slide2"><div class="dark"></div></div>
+          <div class="slide slide3"><div class="dark"></div></div>
+          <div class="slide slide4"><div class="dark"></div></div>
+          <div class="slide slide5"><div class="dark"></div></div>
+          <div class="slide slide6"><div class="dark"></div></div>
+        </div>
+      </section>
+
+      <section class="main8">
+        <div class="main8Box">
+          <a href="https://webflow-path-three.webflow.io/agents/terry-von">
+            <div class="photoes p1">
+              <div class="photo1"></div>
+              <h3>Terry Von</h3>
+              <div class="location">New York, New York</div>
+            </div>
+          </a>
+          <a href="https://webflow-path-three.webflow.io/agents/sarah-prat">
+            <div class="photoes p2">
+              <div class="photo2"></div>
+              <h3>Sarah Prat</h3>
+              <div class="location">Austin, Texas</div>
+            </div>
+          </a>
+          <a href="https://webflow-path-three.webflow.io/agents/samantha-tai">
+            <div class="photoes p3">
+              <div class="photo3"></div>
+              <h3>Samantha Tai</h3>
+              <div class="location">Miami, Florida</div>
+            </div>
+          </a>
+          <div class="photoes p4">
+            <div class="photo4"></div>
+            <h3>Craig Wents B</h3>
+            <div class="location">Brooklyn, New York</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main9">
+        <div class="main9Box">
+          <div class="main9_left">
+            <div class="left_img"></div>
+          </div>
+          <div class="main9_right">
+            <div class="rightBoxes sce1">
+              <div class="sceImg1"></div>
+              <div class="text">
+                <div class="date">APRIL 19, 2024</div>
+                <div class="content">10 Web Design Blogs You Can't Miss</div>
+              </div>
+            </div>
+            <div class="rightBoxes sce2">
+              <div class="sceImg2"></div>
+              <div class="text">
+                <div class="date">APRIL 21, 2021</div>
+                <div class="content">
+                  7 of the Best Examples of Beautiful Blog Design
+                </div>
+              </div>
+            </div>
+            <div class="rightBoxes sce3">
+              <div class="sceImg3"></div>
+              <div class="text">
+                <div class="date">APRIL 25, 2021</div>
+                <div class="content">Designers Who Changed the Web</div>
+              </div>
+            </div>
+            <div class="rightBoxes sce4">
+              <div class="sceImg4"></div>
+              <div class="text">
+                <div class="date">APRIL 26, 2021</div>
+                <div class="content">5 Principles Of Effective Web Design</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script src="./travel.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="./swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
