@@ -1,3 +1,8 @@
 #ingore swiper-t file
 
 swiper-t/
+
+
+
+# Ignore OS-generated files
+.DS_Store
